@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- alpine -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+    <!-- link aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body class="bg-white font-Mons">
+
+        <nav x-data="{ open: false, atTop: true, scrollDirection: 'up', lastScroll: 0 }" 
+        @scroll.window="atTop = window.pageYOffset <= 50; 
+                        scrollDirection = (window.pageYOffset > lastScroll) ? 'down' : 'up'; 
+                        lastScroll = window.pageYOffset;"
+        class="p-4 md:px-8 lg:px-[320px] sticky top-0 z-50 transition-transform duration-500 ease-in-out"
+        :class="(scrollDirection === 'up' || atTop) ? 'translate-y-0' : 'translate-y-[-100%]'">
+
+        <!-- Mneu -->
+        <div class="flex lg:space-x-4 lg:p-4 p-2 space-x-4 justify-center bg-[#1B1B1B] rounded-full mx-auto font-Mons">
+            <!-- Home Button -->
+            <a href="#home"
+                class="bg-[#1B1B1B] scroll-link text-white rounded-full   px-2 py-2 lg:px-6  lg:after:font-semibold hover:bg-gray-700 transition lg:text-2xl text-xs">
+                Home
+            </a>
+
+            <!-- Projects Button -->
+            <a href="#portfolio"
+                class="bg-[#1B1B1B] scroll-link text-white rounded-full  py-2 lg:px-6 relative lg:after:font-semibold hover:bg-gray-700 transition lg:text-2xl  text-xs px-2">
+                Portfolio
+            </a>
+
+            <!-- About Button -->
+            <a href="#testimoni"
+                class="bg-[#1B1B1B] scroll-link text-white rounded-full  py-2 lg:px-6 lg:after:font-semibold hover:bg-gray-700 transition lg:text-2xl text-xs px-2">
+                Testimoni
+            </a>
+
+            <!-- Contact Button -->
+            <a href="#contact"
+                class="bg-[#1B1B1B] scroll-link text-white rounded-full  py-2 lg:px-6 lg:after:font-semibold hover:bg-gray-700 transition lg:text-2xl text-xs px-2">
+                Contact
+            </a>
+        </div>
+        <!-- Hamburger -->
+        <!-- <div class="lg:hidden  h-4 w-4 bg-[#1B1B1B] rounded-sm"></div> -->
+        </div>
+        </div>
+    </nav>
+
+    <!-- Herro -->
+    <div id="home" class="px-4 md:px-8 lg:px-[160px] md:-mt-24 mt-8 lg:-mt-10">
+        <div class="container mx-auto relative">
+            <div class="text-center flex flex-col justify-center -z-50">
+                <h1 class="lg:text-[200px] text-[60px] font-Mons text-[#1B1B1B] font-bold lg:font-black" data-aos="fade-up"
+                    data-aos-duration="800">UX UI</h1>
+                <h1 class="lg:text-[230px] text-[80px] font-Mons font-extrabold text-white lg:-mt-28 -mt-12 text-center text-stroke-2 -z-50"
+                    data-aos="fade-up">
+                    DESIGN</h1>
+            </div>
+
+            <div class=" lg:w-full w-full mx-auto justify-center lg:-mt-80 -mt-24 -z-20">
+                <img src="/Public/Foto.svg" alt="" class="mx-auto text-center " data-aos="fade-up"
+                    data-aos-duration="900">
+            </div>
+
+            <div class="flex items-center justify-center z-50 gap-8 lg:-mt-24 -mt-16" data-aos="fade-up"
+                data-aos-duration="1000">
+                <a href="/Public/CV-ARI_UIUX.pdf"
+                    class="lg:px-12 lg:py-4 px-6 py-2 lg:border-2 border  border-[#1B1B1B] rounded-full text-[#1B1B1B] font-Mons font-medium lg:text-xl text-sm flex items-center  gap-4">Lihat
+                    CV <span> <img src="/Public/export.svg" alt="" class="w-[80
+                %] h-auto"></span> </a>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- About me -->
+    <div class="px-4 md:px-8 lg:px-[160px]  hidden lg:flex gap-20 z-50 ">
+        <div class="col-span-6 ">
+            <h1 class="lg:text-xs text-sm text-start font-normal text-slate-600  mt-4 z-50 font-Mons" data-aos="fade-up"
+                data-aos-duration="800"> Dengan pengalaman 1 tahun di UI/UX Design, <br> Graphic Design, dan br Quality
+                Control (QC) aplikasi, saya selalu berusaha menciptakan desain yang mengutamakan fungsionalitas dan
+                keindahan. Setiap proyek adalah kesempatan untuk menggabungkan kreativitas dan teknologi. </h1>
+        </div>
+        <div class="col-span-6">
+            <p class="lg:text-xs text-sm font-normal text-slate-600 text-end  font-Mons lg:mt-[44px] mt-4"
+                data-aos="fade-up" data-aos-duration="900">
+                Menguasai berbagai aspek desain digital, termasuk UI/UX, Graphic Design, dan Quality Control aplikasi,
+                saya berkomitmen untuk menghasilkan desain yang inovatif dan berorientasi pada pengalaman pengguna.
+                Cepat beradaptasi dan efektif, baik dalam bekerja mandiri maupun kolaboratif, saya siap memberikan
+                solusi desain yang efisien dan tepat guna.</p>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- Project -->
+
+    <div id="portfolio" class="px-4 md:px-8 lg:px-[160px] lg:mt-24 mt-12">
+        <div class="container mx-auto">
+
+            <!-- Hedline -->
+            <div class="flex flex-col text-start">
+                <h1 class="font-Mons lg:text-[64px] text-[44px] text-stroke-2 text-white font-bold" data-aos="fade-up"
+                    data-aos-duration="1000">Portfolio</h1>
+            </div>
+
+            <!-- Card -->
+            <div class="lg:grid lg:grid-cols-12 grid grid-cols-4 lg:gap-16 gap-8 lg:mt-[44px] mt-4">
+                <!-- Card 1 -->
+                <div class="lg:col-span-6 col-span-4 flex flex-col">
+                    <!-- image -->
+                    <div class="w-full">
+                        <a href=""><img src="/Public/Card 1.svg" alt="" class="lg:w-full" data-aos="fade-up"
+                                data-aos-duration="800"></a>
+                    </div>
+                    <!-- text -->
+                    <div class="flex justify-between lg:mt-4 mt-1 items-center">
+                        <div class="text-start flex flex-col g lg:gap-2">
+                            <h1 class="lg:text-xl font-Mons font-normal" data-aos="fade-up" data-aos-duration="900">
+                                Mobile App</h1>
+                            <h2 class="lg:text-xl font-Mons font-bold" data-aos="fade-up" data-aos-duration="1000">
+                                Balance Keeper</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="lg:col-span-6 col-span-4 flex flex-col">
+                    <!-- image -->
+                    <div class="w-full">
+                        <a href="https://medium.com/@ariatenk315/case-study-web-bisnis-rzf-resto-047b61023a02"><img src="/Public/Card 2.svg" alt="" class="lg:w-full" data-aos="fade-up"
+                                data-aos-duration="800"> </a>
+                    </div>
+                    <!-- text -->
+                    <div class="flex justify-between lg:mt-4 mt-1 items-center">
+                        <div class="text-start flex flex-col lg:gap-2">
+                            <h1 class="lg:text-xl font-Mons font-normal" data-aos="fade-up" data-aos-duration="900">Web
+                                Design</h1>
+                            <h2 class="lg:text-xl font-Mons font-bold" data-aos="fade-up" data-aos-duration="1000">RZF
+                                Resto</h2>
+                        </div>
+                        <!-- button -->
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="lg:col-span-6 col-span-4 flex flex-col">
+                    <!-- image -->
+                    <div class="w-full">
+                        <a href="https://medium.com/@ariatenk315/introduction-48f59bddc30a"><img src="/Public/Card 3.svg" alt="" class="lg:w-full" data-aos="fade-up"
+                                data-aos-duration="800"> </a>
+                    </div>
+                    <!-- text -->
+                    <div class="flex justify-between lg:mt-4 mt-1 items-center">
+                        <div class="text-start flex flex-col gap-2 lg:gap-2">
+                            <h1 class="lg:text-xl font-Mons font-normal" data-aos="fade-up" data-aos-duration="900">Web
+                                Design</h1>
+                            <h2 class="lg:text-xl font-Mons font-bold" data-aos="fade-up" data-aos-duration="1000">
+                                Balance Keeper Marketing</h2>
+                        </div>
+                        <!-- button -->
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="lg:col-span-6 col-span-4 flex flex-col">
+                    <!-- image -->
+                    <div class="w-full">
+                        <a href=""><img src="/Public/Card 4.svg" alt="" class="lg:w-full" data-aos="fade-up"
+                                data-aos-duration="800"> </a>
+                    </div>
+                    <!-- text -->
+                    <div class="flex justify-between lg:mt-4 mt-1 items-center">
+                        <div class="text-start flex flex-col gap-2 lg:gap-2">
+                            <h1 class="lg:text-xl font-Mons font-normal" data-aos="fade-up" data-aos-duration="900">
+                                Mobile App</h1>
+                            <h2 class="lg:text-xl font-Mons font-bold" data-aos="fade-up" data-aos-duration="1000">
+                                Jasmine Tea</h2>
+                        </div>
+                        <!-- button -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Expertise -->
+    <div class="px-4 md:px-8 lg:px-[160px] lg:mt-24 mt-12">
+        <div class="container mx-auto">
+
+            <!-- Hedline -->
+            <div class="flex flex-col text-start">
+                <h1 class="font-Mons lg:text-[64px] text-[44px] text-stroke-2 text-white font-bold" data-aos="fade-up"
+                    data-aos-duration="900">Expertise</h1>
+            </div>
+
+            <!-- Card -->
+            <div class="grid grid-cols-4 lg:grid lg:grid-cols-12 gap-8 lg:gap-12 mt-4 lg:mt-[44px]">
+                <div class="col-span-4 lg:col-span-6 flex flex-col gap-4 lg:">
+                    <h1 class="lg:text-[32px] text-xl font-Mons font-semibold" data-aos="fade-up"
+                        data-aos-duration="900">UI DESIGN</h1>
+                    <p class="text-[14px] lg:text-20 font-mons font-medium " data-aos="fade-up"
+                        data-aos-duration="1000">Desain antarmuka yang berfokus pada tampilan visual dan kemudahan
+                        penggunaan aplikasi. Dari warna, ikon, hingga tata letak, kami menciptakan pengalaman yang
+                        menarik bagi pengguna.</p>
+                </div>
+                <div class="col-span-4 lg:col-span-6 flex flex-col gap-4 lg:">
+                    <h1 class="lg:text-[32px] text-xl font-Mons font-semibold" data-aos="fade-up"
+                        data-aos-duration="900">UX DESIGN</h1>
+                    <p class="text-[14px] lg:text-20 font-mons font-medium " data-aos="fade-up"
+                        data-aos-duration="1000">Desain pengalaman pengguna yang memastikan interaksi yang intuitif dan
+                        nyaman. Kami mengoptimalkan proses dari awal hingga akhir untuk memaksimalkan kepuasan pengguna.
+                    </p>
+                </div>
+            </div>
+            <div class="grid grid-cols-4 lg:grid lg:grid-cols-12 gap-8 lg:gap-12 mt-4 lg:mt-[44px]">
+                <div class="col-span-4 lg:col-span-6 flex flex-col gap-4 lg:">
+                    <h1 class="lg:text-[32px] text-xl font-Mons font-semibold" data-aos="fade-up"
+                        data-aos-duration="900">GRAPIHC DESIGN</h1>
+                    <p class="text-[14px] lg:text-20 font-mons font-medium " data-aos="fade-up"
+                        data-aos-duration="1000">Kreasi visual yang mencakup logo, ilustrasi, dan konten visual lainnya.
+                        Kami membuat desain yang mencerminkan identitas merek dan menarik perhatian audiens.</p>
+                </div>
+                <div class="col-span-4 lg:col-span-6 flex flex-col gap-4 lg:">
+                    <h1 class="lg:text-[32px] text-xl font-Mons font-semibold" data-aos="fade-up"
+                        data-aos-duration="900">FRONTEND WEB</h1>
+                    <p class="text-[14px] lg:text-20 font-mons font-medium " data-aos="fade-up"
+                        data-aos-duration="1000">Pengembangan tampilan web yang user-friendly dan responsif. Meskipun
+                        tidak ahli, saya memahami dasar HTML, CSS, dan JavaScript untuk menciptakan halaman web yang
+                        fungsional dan menarik.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Iklan -->
+    <div class=" lg:mt-24 mt-12">
+        <div class="w-full h-16 bg-[#1B1B1B] flex items-center">
+            <h1 class="lg:text-4xl text-xl text-white font-Mons text-center">
+                <marquee behavior="" direction="">DESIGNER</marquee>
+            </h1>
+            <h1 class="lg:text-4xl text-xl text-white font-Mons text-center">
+                <marquee behavior="" direction="">DESIGNER</marquee>
+            </h1>
+            <h1 class="lg:text-4xl text-xl text-white font-Mons text-center">
+                <marquee behavior="" direction="">DESIGNER</marquee>
+            </h1>
+            <h1 class="lg:text-4xl text-xl text-white font-Mons text-center">
+                <marquee behavior="" direction="">DESIGNER</marquee>
+            </h1>
+            <h1 class="lg:text-4xl hidden lg:block text-xl text-white font-Mons text-center">
+                <marquee behavior="" direction="">DESIGNER</marquee>
+            </h1>
+            <h1 class="lg:text-4xl hidden  lg:block text-xl text-white font-Mons text-center">
+                <marquee behavior="" direction="">DESIGNER</marquee>
+            </h1>
+            <h1 class="lg:text-4xl hidden lg:block text-xl text-white font-Mons text-center">
+                <marquee behavior="" direction="">DESIGNER</marquee>
+            </h1>
+        </div>
+    </div>
+
+    <div id="testimoni" class="px-4 md:px-8 lg:px-[160px] lg:mt-24 mt-12">
+        <!-- Hedline -->
+        <div class="flex flex-col text-start">
+            <h1 class="font-Mons lg:text-[64px] text-[44px] text-stroke-2 text-white font-bold" data-aos="fade-up"
+                data-aos-duration="900">Testimoni</h1>
+        </div>
+
+        <!-- isi -->
+        <div class="grid grid-cols-4 lg:grid-cols-12 mt-4 lg:mt-[44px]">
+            <!-- Paragraf di sebelah kiri -->
+            <div class="col-span-4 lg:col-span-9">
+                <p class="font-Mons lg:text-[24px] text-[#1B1B1B] text-start font-medium" data-aos="fade-up"
+                    data-aos-duration="1000">
+                    "Ari Saepulloh adalah desainer UI/UX yang berbakat dengan pemahaman mendalam tentang kebutuhan
+                    pengguna. Dia mampu mengubah ide kompleks menjadi desain yang intuitif dan menarik, dengan perhatian
+                    terhadap detail dan keseimbangan antara estetika dan fungsionalitas. Karyanya selalu melebihi
+                    ekspektasi, dan saya sangat merekomendasikan dia untuk meningkatkan pengalaman pengguna di setiap
+                    proyek."
+                </p>
+            </div>
+
+            <!-- Nama dan jabatan di sebelah kanan -->
+            <div class="col-span-4 lg:col-span-3 flex flex-col justify-end items-end mt-4 lg:mt-0 font-Mons">
+                <h1 class="lg:text-xl font-semibold lg:font-semibold text-[#1B1B1B]" data-aos="fade-up"
+                    data-aos-duration="1000">Erwan Hermawan</h1>
+                <p class="lg:text-xl font-medium" data-aos="fade-up" data-aos-duration="1100">Product Lead</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- lest talk -->
+    <div class="px-4 md:px-8 lg:px-[160px] lg:mt-24 mt-12 text-[#1B1B1B] ">
+        <div class="lg:text-[160px] text-[80px] font-Mons font-black" data-aos="fade-up" data-aos-duration="1100">Mari
+            Kita Bicara</div>
+    </div>
+
+    <!-- Contac -->
+    <div id="contact" class="px-4 md:px-8 lg:px-[160px] lg:mt-24 mt-12 lg:pb-24 pb-12 ">
+        <div class="lg:flex  block  lg:justify-between items-center">
+            <div class="lg:text-[24px] font-Mons text-[#1B1B1B] lg:order-1 order-2" data-aos="fade-up"
+                data-aos-duration="800">Copyright@2024</div>
+
+            <div class="flex items-center gap-8 lg:order-2 order-1 mt-4">
+                <a href="https://www.instagram.com/ari.atenk/"
+                    class="lg:text-[24px] font-Mons text-[#1B1B1B] lg:hover:border-b-2 lg:hover:scale-50 transition-all duration-1000"
+                    data-aos="fade-up" data-aos-duration="900">Instagram</a>
+                <a href="tok.com/@ari.ui.ux"
+                    class="lg:text-[24px] font-Mons text-[#1B1B1B] lg:hover:border-b-2 lg:hover:scale-50 transition-all duration-1000"
+                    data-aos="fade-up" data-aos-duration="1000">Tiktok</a>
+                <a href="https://www.linkedin.com/in/ari-saepuloh-a92aa426a/"
+                    class="lg:text-[24px] font-Mons text-[#1B1B1B] lg:hover:border-b-2 lg:hover:scale-50 transition-all duration-1000"
+                    data-aos="fade-up" data-aos-duration="1100">Linkdlin</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({
+                once: true // animasi hanya akan terjadi sekali
+            });
+        });
+    </script>
+
+    <script src="/src/main.js"></script>
+</body>
+
+</html>
